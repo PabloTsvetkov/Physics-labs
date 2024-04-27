@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+header {
+    background-color: #021024;
+    color: #C1E8FF;
+    
+    height: 10vh;
+
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 100%;
+    width: 20%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo a {
+    all: unset;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #C1E8FF;
+}
+
+nav ul li.active a {
+    font-weight: bold;
+    font-size: larger;
+}
+
+main {
+    padding: 20px;
+}
