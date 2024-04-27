@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор Стоимости Проекта</title>
+    <link rel="stylesheet" href="../static/styles/style.css">
+    <link rel="stylesheet" href="../static/styles/style_lab_61_3.css">
+    <script src="../scripts/sript_laba_61_3.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="../index.html">Laba's</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/Labs/Laba_0.html">Лаб 0</a></li>
+                <li><a href="/Labs/Laba_2.html">Лаб 2</a></li>
+                <li class="active"><a href="/Labs/Laba_61_3.html">Лаб 61.3</a></li>
+                <li><a href="/Labs/Laba_24.html">Лаб 24</a></li>
+                <li><a href="/Labs/Laba_0.html">Лаб ?</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="inputBlock">
+        <h1>Определение вязкости жидкости</h1>
+        <div id="inputForm">
+            <label for="densityLiquid">Расстояние, пройденное шариком (см):</label>
+            <input type="number" id="distance" step="0.01" required><br>
+
+            <label for="densityLiquid">Плотность жидкости (г/см³):</label>
+            <input type="number" id="densityLiquid" step="0.01" required><br>
+            
+            <label for="densityBall">Плотность шарика (г/см³):</label>
+            <input type="number" id="densityBall" step="0.01" required><br>
+            
+            <label for="radius">Радиус шарика (см):</label>
+            <input type="number" id="radius" step="0.01" required><br>
+            
+            <label for="time">Время падения (с):</label>
+            <input type="number" id="time" step="0.01" required><br>
+            
+            <div class="buttons">
+                <button onclick="addExperiment()">Добавить эксперимент</button>
+                <button onclick="clearTable()">Очистить таблицу</button>
+            </div>
+        </div>
+        
+        <table id="dataTable">
+            <tr>
+                <th>№</th>
+                <th>Плотность жидкости (г/см³)</th>
+                <th>Плотность шарика (г/см³)</th>
+                <th>Радиус шарика (см)</th>
+                <th>Время падения (с)</th>
+                <th>Скорость падения (см/с)</th>
+                <th>Коэффициент плотности</th>
+            </tr>
+        </table>
+        
+        <div class="buttons">
+            <button onclick="toggleCalculations()">Показать/скрыть промежуточные вычисления</button>
+        </div>
+        <div id="calculationResults">
+            <!-- <h2>Промежуточные вычисления</h2> -->
+            <div id="intermediateCalculations"></div>
+        </div>
+    </div>
+    <!-- <div class="separator"></div> -->  
+    <div class="results">
+        <!-- <h1>Результаты</h1> -->
+        <embed src="../static/pdf_files/lab_61.pdf" width="100%" height="100%" type='application/pdf'>
+    </div>
+    </main>
+</body>
+</html>
