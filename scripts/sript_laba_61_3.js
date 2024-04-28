@@ -1,4 +1,5 @@
 let dataInput = false;
+
 function addExperiment() {
     var densityLiquid = parseFloat(document.getElementById("densityLiquid").value);
     var densityBall = parseFloat(document.getElementById("densityBall").value);
@@ -6,8 +7,41 @@ function addExperiment() {
     var time = parseFloat(document.getElementById("time").value);
     var distance = parseFloat(document.getElementById("distance").value); 
 
+    if (isNaN(densityLiquid) || isNaN(densityBall) || isNaN(radius) || isNaN(time) || isNaN(distance)) {
+        if (isNaN(densityLiquid)) {
+            document.getElementById("densityLiquid").style.border = "1px solid red";
+        }
+        else {
+            document.getElementById("densityLiquid").style.border = "1px solid #bbbbbb";
+        }
+        if (isNaN(densityBall)) {
+            document.getElementById("densityBall").style.border = "1px solid red";
+        }
+        else { document.getElementById("densityBall").style.border = "1px solid #bbbbbb"; }
+        if (isNaN(radius)) {
+            document.getElementById("radius").style.border = "1px solid red";
+        }
+        else { document.getElementById("radius").style.border = "1px solid #bbbbbb"; }
+        if (isNaN(time)) {
+            document.getElementById("time").style.border = "1px solid red";
+        }
+        else { document.getElementById("time").style.border = "1px solid #bbbbbb"; }
+        if (isNaN(distance)) {
+            document.getElementById("distance").style.border = "1px solid red";
+        }
+        else { document.getElementById("distance").style.border = "1px solid #bbbbbb"; }
+        return ;
+    }
+    else {
+        document.getElementById("distance").style.border = "1px solid #bbbbbb";
+        document.getElementById("time").style.border = "1px solid #bbbbbb";
+        document.getElementById("radius").style.border = "1px solid #bbbbbb";
+        document.getElementById("densityBall").style.border = "1px solid #bbbbbb";
+        document.getElementById("densityLiquid").style.border = "1px solid #bbbbbb";
+    }
+
     var velocity = distance / time;
-    var coefficient = (densityBall - densityLiquid) * 9.8 * Math.pow(radius, 2) * 2 / (velocity * 9,8);
+    var coefficient = (densityBall - densityLiquid) * 980 * Math.pow(radius, 2) * 2 / (velocity * 9);
 
     var table = document.getElementById("dataTable");
     var row = table.insertRow(-1);
@@ -35,7 +69,7 @@ function addExperiment() {
 }
 
 function clearTable() {
-    document.getElementById("dataTable").innerHTML = "<tr><th>№</th><th>Плотность жидкости (кг/м³)</th><th>Плотность шарика (кг/м³)</th><th>Радиус шарика (м)</th><th>Время падения (с)</th><th>Скорость падения (м/с)</th><th>Коэффициент плотности</th></tr>";
+    document.getElementById("dataTable").innerHTML = "<tr><th>№</th><th>Плотность жидкости (г/см³)</th><th>Плотность шарика (г/см³)</th><th>Радиус шарика (см)</th><th>Время падения (с)</th><th>Скорость падения (см/с)</th><th>Коэффициент плотности</th></tr>";
     document.getElementById("intermediateCalculations").innerHTML = "";
     dataInput = false;
 }
@@ -47,9 +81,9 @@ function showIntermediateCalculations(densityLiquid, densityBall, radius, time, 
     calculationResult += "<p>Скорость падения шарика (v₀) = l/t</p>";
     calculationResult += "<p>Скорость падения шарика (v₀) = " + distance / time + "</p>";
     calculationResult += "<p>Скорость падения шарика (v₀) = " + velocity.toFixed(2) + " м/с</p><br>";
-    calculationResult += "<p>Коэффициент плотности (Cp) = (2 * r^2 * ((ρш - ρж) * g) / (g * V₀)</p>";
+    calculationResult += "<p>Коэффициент плотности (Cp) = (2 * r^2 * ((ρш - ρж) * g*100) / (9 * V₀)</p>";
     // calculationResult += "<p>Коэффициент плотности (Cp) = ((" + densityBall + " - " + densityLiquid + ") * 9.8 * " + radius + "^2) / (" + velocity.toFixed(2) + "^2 * " + time.toFixed(2) + "^2)</p>";
-    calculationResult += "<p>Коэффициент плотности (Cp) = " + coefficient.toFixed(10) + "</p>";
+    calculationResult += "<p>Коэффициент плотности (Cp) = " + coefficient.toFixed(6) + "</p>";
 
     calculationsDiv.innerHTML = calculationResult;
 }
