@@ -82,7 +82,6 @@ function showIntermediateCalculations(densityLiquid, densityBall, radius, time, 
     calculationResult += "<p>Скорость падения шарика (v₀) = " + distance / time + "</p>";
     calculationResult += "<p>Скорость падения шарика (v₀) = " + velocity.toFixed(2) + " м/с</p><br>";
     calculationResult += "<p>Коэффициент плотности (Cp) = (2 * r^2 * ((ρш - ρж) * g*100) / (9 * V₀)</p>";
-    // calculationResult += "<p>Коэффициент плотности (Cp) = ((" + densityBall + " - " + densityLiquid + ") * 9.8 * " + radius + "^2) / (" + velocity.toFixed(2) + "^2 * " + time.toFixed(2) + "^2)</p>";
     calculationResult += "<p>Коэффициент плотности (Cp) = " + coefficient.toFixed(6) + "</p>";
 
     calculationsDiv.innerHTML = calculationResult;

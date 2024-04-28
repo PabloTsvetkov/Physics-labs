@@ -26,22 +26,11 @@
     <main>
         <div class="inputBlock">
         <h2>Физические измерения и обработка из результатов</h2>
+        <span style="font-size: 12px;">Нужно ввести все 20 значений</span>
         <div id="inputForm">
-            <label for="densityLiquid">Расстояние, пройденное шариком (см):</label>
-            <input type="number" id="distance" step="0.01" required><br>
+            <label for="diametr">Диаметр цилиндра (мм):</label>
+            <input type="number" id="diametr" step="0.01" required><br>
 
-            <label for="densityLiquid">Плотность жидкости (г/см³):</label>
-            <input type="number" id="densityLiquid" step="0.01" required><br>
-            
-            <label for="densityBall">Плотность шарика (г/см³):</label>
-            <input type="number" id="densityBall" step="0.01" required><br>
-            
-            <label for="radius">Радиус шарика (см):</label>
-            <input type="number" id="radius" step="0.01" required><br>
-            
-            <label for="time">Время падения (с):</label>
-            <input type="number" id="time" step="0.01" required><br>
-            
             <div class="buttons">
                 <button onclick="addExperiment()">Добавить эксперимент</button>
                 <button onclick="clearTable()">Очистить таблицу</button>
@@ -50,19 +39,19 @@
         
         <table id="dataTable">
             <tr>
-                <th>№</th>
-                <th>Плотность жидкости (г/см³)</th>
-                <th>Плотность шарика (г/см³)</th>
-                <th>Радиус шарика (см)</th>
-                <th>Время падения (с)</th>
-                <th>Скорость падения (см/с)</th>
-                <th>Коэффициент плотности</th>
+                <th rowspan="2">№</th>
+                <th rowspan="2">D<sub>i</sub>, мм</th>
+                <th colspan="2">n = 20</th>
+                <th colspan="2">n = 5</th>
+            </tr>
+            <tr>
+                <th>|D<sub>i</sub>|, мм</th>
+                <th>ΔD<sub>i</sub><sup>2</sup>, мм<sup>2</sup></th>
+                <th>|D<sub>i</sub>|, мм</th>
+                <th>ΔD<sub>i</sub><sup>2</sup>, мм<sup>2</sup></th>
             </tr>
         </table>
         
-        <div class="buttons">
-            <button onclick="toggleCalculations()">Показать/скрыть промежуточные вычисления</button>
-        </div>
         <div id="calculationResults">
             <!-- <h2>Промежуточные вычисления</h2> -->
             <div id="intermediateCalculations"></div>
