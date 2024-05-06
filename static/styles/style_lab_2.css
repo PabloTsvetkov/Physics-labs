@@ -1,0 +1,43 @@
+#inputForm {
+    margin-bottom: 20px;
+}
+
+#inputForm input {
+    width: 70%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #bbbbbb;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+#inputForm label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+#calculationResults {
+    margin-top: 40px;
+}
+
+#intermediateCalculations {
+    margin-top: 30px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 100%;
+}

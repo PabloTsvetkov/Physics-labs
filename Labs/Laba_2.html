@@ -2,10 +2,11 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Калькулятор Стоимости Проекта</title>
+    <title>Лаба 2</title>
+    <link rel="shortcut icon" href="../static/images/l.svg">
     <link rel="stylesheet" href="../static/styles/style.css">
-    <link rel="stylesheet" href="../static/styles/style_lab_0.css">
-    <script src="../scripts/sript_laba_0.js"></script>
+    <link rel="stylesheet" href="../static/styles/style_lab_2.css">
+    <script src="../scripts/sript_laba_2.js"></script>
 </head>
 <body>
     <header>
@@ -23,7 +24,46 @@
         </nav>
     </header>
     <main>
+        <div class="inputBlock">
+            <h1>Изучение динамических законов</h1>
+            <div id="inputForm">
+                <label for="S">Введите путь S</label>
+                <input type="number" id="S"><br>
 
+                <label for="t">Введите время t</label>
+                <input type="number" id="t"><br>
+
+                <label for="m0" id="m0Label">Введите массу перегрузка m<sub>o</sub></label>
+                <input type="number" id="m0"><br>
+
+                <div class="buttons">
+                    <button onclick="addExperiment()">Добавить эксперимент</button>
+                    <button onclick="clearTable()">Очистить таблицу</button>
+                </div>
+            </div>
+
+            <table id="dataTable">
+                <tr>
+                    <td colspan="4" style="text-align:left; padding-left: 20px; height: 30px;">m<sub>0</sub> = </td>
+                </tr>
+                <tr>
+                    <th>№</th>
+                    <th>S, м</th>
+                    <th>t, c</th>
+                    <th>a, м/с<sup>2</sup></th>
+                </tr>
+            </table>
+
+            <div id="calculationResults">
+                <!-- <h2>Промежуточные вычисления</h2> -->
+                <div id="intermediateCalculations"></div>
+            </div>
+        </div>
+
+        <div class="results">
+            <!-- <h1>Результаты</h1> -->
+            <embed src="../static/pdf_files/lab_2.pdf" width="100%" height="100%" type='application/pdf'>
+        </div>
     </main>
 </body>
 </html>
