@@ -33,15 +33,24 @@
                 <label for="t">Введите время t</label>
                 <input type="number" id="t"><br>
 
+                <label for="m" id="mLabel">Введите массу груза m</label>
+                <input type="number" id="m"><br>
+
                 <label for="m0" id="m0Label">Введите массу перегрузка m<sub>o</sub></label>
                 <input type="number" id="m0"><br>
 
+                <label for="m0" id="rLabel">Введите радиус блока r</label>
+                <input type="number" id="r"><br>
+
+                <label for="m0" id="JLabel">Введите момент инерции блока J</label>
+                <input type="number" id="J"><br>
+
                 <div class="buttons">
                     <button onclick="addExperiment()">Добавить эксперимент</button>
-                    <button onclick="clearTable()">Очистить таблицу</button>
+                    <button onclick="clearTable()">Новый перегрузок</button>
                 </div>
             </div>
-
+            <h4 style="text-align: right; margin-bottom: 0px;">Таблица 1</h4>
             <table id="dataTable">
                 <tr>
                     <td colspan="4" style="text-align:left; padding-left: 20px; height: 30px;">m<sub>0</sub> = </td>
@@ -54,10 +63,21 @@
                 </tr>
             </table>
 
-            <div id="calculationResults">
-                <!-- <h2>Промежуточные вычисления</h2> -->
+            <h4 style="text-align: right; margin-top: 50px; margin-bottom: 0;">Таблица 2</h4>
+            <table id="table2">
+                <tr>
+                    <td rowspan="2">Масса перегрузка, m<sub>0</sub>(г)</td>
+                    <td rowspan="2">Экспериментальные значения ускорения, &lta&gt +- Δa </td>
+                    <td colspan="2">Расчетные значения a(м/с<sup>2</sup>), полученные на основании:</td>
+                </tr>
+                <tr>
+                    <td>формулы(7)</td>
+                    <td>формулы(9)</td>
+                </tr>
+            </table>
+            <!-- <div id="calculationResults">
                 <div id="intermediateCalculations"></div>
-            </div>
+            </div> -->
         </div>
 
         <div class="results">
