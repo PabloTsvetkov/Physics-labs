@@ -25,18 +25,7 @@ function addExperiment() {
     var cell4 = row.insertCell(3);
     var cell5 = row.insertCell(4);
     var cell6 = row.insertCell(5);
-    // if (experiments_count <= 5) {
-    //     var cell6 = row.insertCell(5);
-    // }
 
-    // if (experiments_count > 5) {
-    //     switch (experiments_count) {
-    //         case (6): {
-    //             cell5.outerHTML = "<th colspan='2'>&ltD<sub>5</sub>&gt = " + diam_sum / experiments_count + "</th>";
-    //             break;
-    //         }
-    //     }
-    // }
     cell1.outerHTML = "<th>" + experiments_count + "</th>";
     cell2.innerHTML = d;
     cell3.innerHTML = Math.abs((diam_sum / experiments_count) - d).toFixed(2);
