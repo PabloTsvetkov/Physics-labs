@@ -1,12 +1,12 @@
 let dataInput = false;
-const i = 1;
 
 function addExperiment() {
   var u = parseFloat(document.getElementById("u").value);
   var t = parseFloat(document.getElementById("t").value);
-  var w = parseFloat(document.getElementById("t").value);
+  var w = parseFloat(document.getElementById("w").value);
+  var s = parseFloat(document.getElementById("s").value);
 
-  if (isNaN(t) || isNaN(u) || isNaN(w)) {
+  if (isNaN(t) || isNaN(u) || isNaN(w) || isNaN(s)) {
     if (isNaN(u)) {
       document.getElementById("u").style.border = "1px solid red";
     }
@@ -23,16 +23,22 @@ function addExperiment() {
     else {
       document.getElementById("w").style.border = "1px solid #bbbbbb";
     }
+    if (isNaN(s)) {
+      document.getElementById("s").style.border = "1px solid red";
+    }
+    else {
+      document.getElementById("s").style.border = "1px solid #bbbbbb";
+    }
     return;
   }
   else {
     document.getElementById("t").style.border = "1px solid #bbbbbb";
     document.getElementById("u").style.border = "1px solid #bbbbbb";
     document.getElementById("w").style.border = "1px solid #bbbbbb";
+    document.getElementById("s").style.border = "1px solid #bbbbbb";
   }
 
   var kelv = t + 273;
-  var s = 1;
   var sigma = (w)/(s*kelv^4);
 
   var table = document.getElementById("dataTable");
