@@ -2,11 +2,11 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Лаба 24</title>
+    <title>Лаба 45</title>
     <link rel="shortcut icon" href="../static/images/l.svg">
     <link rel="stylesheet" href="../static/styles/style.css">
     <link rel="stylesheet" href="../static/styles/style_lab_61_3.css">
-    <script src="../scripts/sript_laba_24.js"></script>
+    <script src="../scripts/2script_laba_45.js"></script>
 </head>
 <body>
     <header>
@@ -18,9 +18,9 @@
                 <li><a href="/Labs/Laba_0.html">Лаб 0</a></li>
                 <li><a href="/Labs/Laba_2.html">Лаб 2</a></li>
                 <li><a href="/Labs/Laba_61_3.html">Лаб 61.3</a></li>
-                <li class="active"><a href="/Labs/Laba_24.html">Лаб 24</a></li>
+                <li><a href="/Labs/Laba_24.html">Лаб 24</a></li>
                 <li><a href="/Labs/Laba_46_1.html">Лаб 46.1</a></li>
-                <li><a href="/Labs/2Laba_45.html">Лаб 45</a></li>
+                <li class="active"><a href="/Labs/2Laba_45.html">Лаб 45</a></li>
                 <li><a href="/Labs/2Laba_49_1.html">Лаб 49.1</a></li>
                 <li><a href="/Labs/2Laba_52.html">Лаб 52</a></li>
             </ul>
@@ -28,15 +28,16 @@
     </header>
     <main>
         <div class="inputBlock">
-        <h1>Исследование характеристик источника постоянного тока</h1>
+        <h1>Изучение законов теплового излучения</h1>
         <div id="inputForm">
-            <label for="densityLiquid">ЭДС:</label>
-            <input type="number" id="eds" step="0.01" required><br>
+            <label for="densityLiquid">Температура в Цельсиях:</label>
+            <input type="number" id="t" step="0.01" required><br>
 
-            <label for="densityLiquid">Сила тока короткого замыкания:</label>
-            <input type="number" id="Ikz" step="0.01" required><br>
+            <label for="densityLiquid">Напряжение:</label>
+            <input type="number" id="u" step="0.01" required><br>
             
-
+            <label for="densityLiquid">Мощность:</label>
+            <input type="number" id="w" step="0.01" required><br>
 
             <!-- <label for="densityBall">Плотность шарика (г/см³):</label>
             <input type="number" id="densityBall" step="0.01" required><br>
@@ -56,10 +57,11 @@
         <table id="dataTable">
             <tr>
                 <th>№</th>
-                <th>ЭДС</th>
-                <th>I<sub>кз</sub></th>
-                <th>Сопротивление источника(r):</th>
-                <th>Мощность(N<sub>max</sub>):</th>
+                <th>t, <sup>0</sup>C</th>
+                <th>U<sub>тс</sub>, мВ</th>
+                <th>W<sub>зам</sub>, Вт</th>
+                <th>T, K</th>
+                <th>σ=W/(ST<sup>4</sup>),<br>Дж/(м<sup>2</sup>*с*К<sup>4</sup>)</th>
             </tr>
         </table>
         
@@ -74,7 +76,7 @@
     <!-- <div class="separator"></div> -->  
     <div class="results">
         <!-- <h1>Результаты</h1> -->
-        <embed src="../static/pdf_files/lab_24.pdf" width="100%" height="100%" type='application/pdf'>
+        <embed src="../static/pdf_files/lab_45.pdf" width="100%" height="100%" type='application/pdf'>
     </div>
     </main>
 </body>

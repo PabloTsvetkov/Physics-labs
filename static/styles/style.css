@@ -40,6 +40,7 @@ nav ul {
 
 nav ul li {
     margin-right: 20px;
+    padding: 5px;
 }
 
 nav ul li a {
@@ -50,6 +51,26 @@ nav ul li a {
 nav ul li.active a {
     font-weight: bold;
     font-size: larger;
+}
+
+/* Make borders for labs of the first course */
+nav ul li:nth-of-type(4) {
+    border-right: 3px solid white;
+    margin-right: 20px;
+}
+nav ul li:nth-of-type(1) {
+    border-left: 3px solid white;
+}
+nav ul li:nth-of-type(5) {
+    border-left: 3px solid white;
+    margin-left: 20px;
+}
+nav ul li {
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+nav ul li:last-of-type {
+    border-right: 3px solid white;
 }
 
 main {
