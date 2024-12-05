@@ -28,14 +28,25 @@
     </header>
     <main>
         <div class="inputBlock">
-        <h1>Исследование характеристик источника постоянного тока</h1>
+        <h1>Опыт Резерфорда (Зондирование вещества быстрыми альфа-частицами)</h1>
         <div id="inputForm">
-            <label for="densityLiquid">ЭДС:</label>
-            <input type="number" id="eds" step="0.01" required><br>
+            <label for="densityLiquid">Угол:</label>
+            <input type="number" id="ygol" step="0.01" required><br>
 
-            <label for="densityLiquid">Сила тока короткого замыкания:</label>
-            <input type="number" id="Ikz" step="0.01" required><br>
+            <label for="densityLiquid">Время:</label>
+            <input type="number" id="time" step="0.01" required><br>
+
+            <label for="densityLiquid">Число рассеянных частиц:</label>
+            <input type="number" id="dN" step="0.01" required><br>
             
+            <label for="densityLiquid">Эксп. значение диф. частиц:</label>
+            <input type="number" id="eks" step="0.01" required><br>
+
+            <label for="densityLiquid">Абсолютная погрешность:</label>
+            <input type="number" id="abs" step="0.01" required><br>
+
+            <label for="densityLiquid">Теор. значение диф. частиц:</label>
+            <input type="number" id="teor" step="0.01" required><br>
 
 
             <!-- <label for="densityBall">Плотность шарика (г/см³):</label>
@@ -55,11 +66,12 @@
         <!-- при R=r - полезаня мощность максимальна -->
         <table id="dataTable">
             <tr>
-                <th>№</th>
-                <th>ЭДС</th>
-                <th>I<sub>кз</sub></th>
-                <th>Сопротивление источника(r):</th>
-                <th>Мощность(N<sub>max</sub>):</th>
+                <th>Угол, градусы</th>
+                <th>t, c</th>
+                <th>dN</th>
+                <th>Эксп. значение<br>диф. сечения<br>I<sub>э</sub>, х10<sup>-23</sup>см<sup>2</sup></th>
+                <th>Абс. погрешность<br>∆I, х10<sup>-23</sup>см<sup>2</sup></th>
+                <th>Теор. значение<br>диф. сечения<br>I<sub>т</sub>, х10<sup>-23</sup>см<sup>2</sup></th>
             </tr>
         </table>
         
@@ -74,7 +86,7 @@
     <!-- <div class="separator"></div> -->  
     <div class="results">
         <!-- <h1>Результаты</h1> -->
-        <embed src="../static/pdf_files/lab_24.pdf" width="100%" height="100%" type='application/pdf'>
+        <embed src="../static/pdf_files/lab_52.pdf" width="100%" height="100%" type='application/pdf'>
     </div>
     </main>
 </body>
