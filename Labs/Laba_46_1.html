@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="../static/images/l.svg">
     <link rel="stylesheet" href="../static/styles/style.css">
     <link rel="stylesheet" href="../static/styles/style_lab_0.css">
-    <script src="../scripts/sript_laba_0.js"></script>
+    <script src="../scripts/2script_laba_46_1.js"></script>
 </head>
 <body>
     <header>
@@ -29,10 +29,28 @@
     <main>
         <div class="inputBlock">
         <h3>Изучение законов фотоэффекта и определение постоянной Планка</h3>
-        <span style="font-size: 12px; color: gray">* Нужно ввести все 20 значений</span>
+        <!-- <span style="font-size: 12px; color: gray">* Нужно ввести все 20 значений</span> -->
         <div id="inputForm">
-            <label for="diametr">Диаметр цилиндра (мм):</label>
-            <input type="number" id="diametr" step="0.01" required><br>
+            <label for="diametr">Длина волны:</label>
+            <input type="number" id="nm1" step="0.01" required><br>
+            <label for="diametr">Длина волны:</label>
+            <input type="number" id="nm2" step="0.01" required><br>
+            <label for="diametr">Длина волны:</label>
+            <input type="number" id="nm3" step="0.01" required><br>
+            <label for="diametr">Длина волны:</label>
+            <input type="number" id="nm4" step="0.01" required><br>
+            <label for="diametr">Длина волны:</label>
+            <input type="number" id="nm5" step="0.01" required><br>
+            <label for="diametr">Напряжение запирающее:</label>
+            <input type="number" id="iz1" step="0.01" required><br>
+            <label for="diametr">Напряжение запирающее:</label>
+            <input type="number" id="iz2" step="0.01" required><br>
+            <label for="diametr">Напряжение запирающее:</label>
+            <input type="number" id="iz3" step="0.01" required><br>
+            <label for="diametr">Напряжение запирающее:</label>
+            <input type="number" id="iz4" step="0.01" required><br>
+            <label for="diametr">Напряжение запирающее:</label>
+            <input type="number" id="iz5" step="0.01" required><br>
 
             <div class="buttons">
                 <button onclick="addExperiment()">Добавить эксперимент</button>
@@ -42,16 +60,12 @@
         
         <table id="dataTable">
             <tr>
-                <th rowspan="2">№</th>
-                <th rowspan="2">D<sub>i</sub>, мм</th>
-                <th colspan="2">n = 20</th>
-                <th colspan="2">n = 5</th>
-            </tr>
-            <tr>
-                <th>|D<sub>i</sub>|, мм</th>
-                <th>ΔD<sub>i</sub><sup>2</sup>, мм<sup>2</sup></th>
-                <th>|D<sub>i</sub>|, мм</th>
-                <th>ΔD<sub>i</sub><sup>2</sup>, мм<sup>2</sup></th>
+                <th>№</th>
+                <th>λ<sub></sub></th>
+                <th>U<sub>з</sub></th>
+                <th>ν, ТГц<sub></sub></th>
+                <th>h<sub>i</sub></th>
+                <th>h<sub>ср</sub>*10<sup>-34</sup></th>
             </tr>
         </table>
         

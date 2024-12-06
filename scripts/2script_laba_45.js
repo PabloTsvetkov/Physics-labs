@@ -75,8 +75,8 @@ function showIntermediateCalculations(t, u, w, kelv, sigma) {
   var calculationsDiv = document.getElementById("intermediateCalculations");
   var calculationResult = "<p><strong>Вычисления:</strong></p>";
 
-  calculationResult += "<p>Температура в Кельвинах = t+273 = " + t + 273 + "</p>";
-  calculationResult += "<p>Постоянная Стефана-Больцмана = σ=W/(ST<sup>4</sup>),<br>Дж/(м<sup>2</sup>*с*К<sup>4</sup>) = " + sigma + "</p>";
+  // calculationResult += "<p>Температура в Кельвинах = t+273 = " + t + 273 + "</p>";
+  // calculationResult += "<p>Постоянная Стефана-Больцмана = σ=W/(ST<sup>4</sup>),<br>Дж/(м<sup>2</sup>*с*К<sup>4</sup>) = " + sigma + "</p>";
 
   calculationsDiv.innerHTML = calculationResult;
 }
